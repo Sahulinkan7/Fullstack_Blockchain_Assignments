@@ -98,8 +98,17 @@ function prime(start, end) {
       arr.push(i);
     }
   }
-  return arr;
+  console.log(arr);
+  let factarr = [];
+  for (let k = 0; k < arr.length; k++) {
+    var fact = 1;
+    for (let l = 1; l <= arr[k]; l++) {
+      fact = fact * l;
+    }
+    factarr.push(fact);
+  }
+  return factarr;
 }
 
-op = prime(1, 100);
+op = prime(1, 10);
 console.log(op);
